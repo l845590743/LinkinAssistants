@@ -6,4 +6,10 @@
 
     <color name="sjfd_final_item_bg_pressed">#99429ED6</color>
     <color name="sjfd_final_item_bg_normal">#ffffff</color>
+
+    <!-- 软件管理模块-顶部控件进度颜色定义 -->
+    <color name="progress_info_progress_bg">#DFE0DF</color>
+    <color name="progress_info_progress_secondary">#88E7989A</color>
+    <color name="progress_info_progress_primary">#E7989A</color>
+    
 </resources>

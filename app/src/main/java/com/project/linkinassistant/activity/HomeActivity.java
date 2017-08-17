@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 
@@ -54,6 +55,17 @@ public class HomeActivity extends AppCompatActivity {
     private void filllsit() {
         HomeAdapter homeAdapter = new HomeAdapter(this,mHomeList);
         mGridview.setAdapter(homeAdapter);
+        mGridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 3:
+                        Intent intent = new Intent(HomeActivity.this, AppManagerActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+            }
+        });
     }
 
     private void setLogoAnimation() {

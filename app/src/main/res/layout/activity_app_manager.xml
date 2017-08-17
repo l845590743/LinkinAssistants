@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/CommentTitleText"
+        android:text="软件管理" />
+
+    <com.project.linkinassistant.widget.ProgressInfoView
+        android:id="@+id/app_manager_piv_memory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <!-- 线条 -->
+    <include layout="@layout/common_line_layout" />
+    
+    <com.project.linkinassistant.widget.ProgressInfoView
+        android:id="@+id/app_manager_piv_sdcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/app_manager_tv_user_app_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#999999"
+        android:padding="5dp"
+        android:text="用户程序(0)个" />
+
+    <ListView
+        android:id="@+id/app_manager_listview"
+        android:layout_width="match_parent"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

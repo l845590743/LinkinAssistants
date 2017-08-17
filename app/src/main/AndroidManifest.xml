@@ -2,6 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.project.linkinassistant">
 
+    <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- SD卡读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 读取电话状态，sim卡信息等 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 读取联系人信息 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- 接收开机广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- 发送短信权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <!-- 接收短信权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 打电话、挂断电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 读写通话记录权限 -->
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
@@ -19,6 +39,7 @@
         </activity>
         <activity android:name=".activity.HomeActivity"/>
         <activity android:name=".activity.SettingActivity"/>
+        <activity android:name=".activity.AppManagerActivity"/>
     </application>
 
 </manifest>
