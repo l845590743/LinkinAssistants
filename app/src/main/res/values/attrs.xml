@@ -7,4 +7,12 @@
             <enum name="end" value="1"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="GuideIndicator">
+        <!-- 当前步骤索引 -->
+        <attr name="step" format="integer" min="1"/>
+        <!-- 向导总步骤数 -->
+        <attr name="total" format="integer" min="1"/>
+    </declare-styleable>
+
 </resources>
