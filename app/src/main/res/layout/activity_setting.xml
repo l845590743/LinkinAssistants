@@ -23,4 +23,11 @@
         zhimin:titles="手动更新设置"
         zhimin:bgType="end"/>
 
+    <!--自定义进度条 系统怎么写 就仿照写-->
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/view_loading_progressbar"
+        android:visibility="gone"/>
+
 </LinearLayout>
