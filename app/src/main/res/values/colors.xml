@@ -3,4 +3,7 @@
     <color name="colorPrimary">#FF000000</color>
     <color name="colorPrimaryDark">#FF000000</color>
     <color name="colorAccent">#FF000000</color>
+
+    <color name="sjfd_final_item_bg_pressed">#99429ED6</color>
+    <color name="sjfd_final_item_bg_normal">#ffffff</color>
 </resources>
