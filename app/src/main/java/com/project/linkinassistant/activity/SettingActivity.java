@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.project.linkinassistant.R;
+import com.project.linkinassistant.widget.NumberAddressToast;
 import com.project.linkinassistant.widget.SettingItemView;
 import com.project.linkinassistant.widget.ToastStyleSelectDialog;
 
@@ -14,7 +15,9 @@ import com.project.linkinassistant.widget.ToastStyleSelectDialog;
  */
 public class SettingActivity extends AppCompatActivity {
 
-    private SettingItemView mSettingItemView;
+    private SettingItemView mZdgx;
+    private SettingItemView mSdgx;
+    private NumberAddressToast mToast;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,16 +29,29 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        mSettingItemView.setOnClickListener(new View.OnClickListener() {
+        mToast = new NumberAddressToast(SettingActivity.this);
+        mZdgx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ToastStyleSelectDialog dialog = new ToastStyleSelectDialog(SettingActivity.this);
                 dialog.show();
             }
         });
+        mSdgx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        mToast.show("Hi");
+                    }
+                });
+            }
+        });
     }
 
     private void initView() {
-        mSettingItemView = (SettingItemView) findViewById(R.id.setting_zdgx);
+        mZdgx = (SettingItemView) findViewById(R.id.setting_zdgx);
+        mSdgx = (SettingItemView) findViewById(R.id.setting_sdgx);
     }
 }

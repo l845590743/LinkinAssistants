@@ -19,6 +19,7 @@
         zhimin:bgType="start"/>
 
     <com.project.linkinassistant.widget.SettingItemView
+        android:id="@+id/setting_sdgx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         zhimin:titles="手动更新设置"
