@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LinkinAssistant</string>
+    <string name="home_title">Linkin手机助手</string>
+    <string name="home_des">Linkin手机助手 你值得拥有！放心使用 专心为您</string>
 </resources>
