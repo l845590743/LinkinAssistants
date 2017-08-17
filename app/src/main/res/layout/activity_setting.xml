@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:zhimin="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -8,19 +9,18 @@
         android:text="设置中心"
         style="@style/CommentTitleText"/>
 
+
     <com.project.linkinassistant.widget.SettingItemView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/first_normal"
-        />
+        zhimin:titles="自动更新设置"
+        zhimin:bgType="start"/>
 
     <com.project.linkinassistant.widget.SettingItemView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/last_normal"/>
-
+        zhimin:titles="手动更新设置"
+        zhimin:bgType="end"/>
 
 </LinearLayout>
