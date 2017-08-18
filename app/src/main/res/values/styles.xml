@@ -31,7 +31,7 @@
     </style>
 
     <!-- 号码归属地样式选择对话框动画效果 -->
-    <!--仿照键盘弹出的效果 <item name="android:windowAnimationStyle">@android:style/Animation.InputMethod</item>-->
+    <!--仿照键盘弹出的效果 <item name="android:windowAnimationStyle">@android:style/Animations.InputMethod</item>-->
     <style name="ToastStyleSelectAnimation">
         <item name="android:windowEnterAnimation">@anim/input_method_enter</item>
         <item name="android:windowExitAnimation">@anim/input_method_exit</item>

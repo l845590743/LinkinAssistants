@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/CommentTitleText"
+        android:text="手机杀毒" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#429ED6" >
+
+        <LinearLayout
+            android:id="@+id/antivirus_ll_agin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/antivirus_tv_antitext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您的手机很安全"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp" />
+
+            <Button
+                android:id="@+id/antivirus_btn_agin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/common_btn_ok_selector"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="重新扫描"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/antivirus_ll_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:gravity="center"
+            >    
+			<!-- 
+				arc_progress: 设置进度条的进度
+				arc_bottom_text ： 设置底部的文字
+				arc_angle : 设置进度条的弧度
+				arc_stroke_width : 设置进度条的边框的宽度
+				arc_max:最大的进度
+				arc_unfinished_color:没有加载的进度的颜色
+				arc_finished_color:设置已经加载的进度的颜色
+				arc_text_size:百分比的字体大小
+				arc_text_color:设置文本的颜色
+				arc_suffix_text：设置百分号对应的文字
+				arc_suffix_text_size:设置百分号字体大小
+				arc_suffix_text_padding:百分号距离百分号文本的距离
+				arc_bottom_text_size:底部文字的大小
+			-->
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/antivirus_ap_progressbar"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:background="#429ED6"
+        		custom:arc_bottom_text="扫描中"
+        		custom:arc_stroke_width="10dp"
+        		custom:arc_bottom_text_size="15sp"
+        		custom:arc_text_color="#FFFFFF"
+                />
+            <TextView 
+                android:id="@+id/antivirus_tv_packageName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="com.android.mms"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/antivirus_ll_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <ImageView 
+                android:id="@+id/antivirus_iv_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+             <ImageView 
+                android:id="@+id/antivirus_iv_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/antivirus_lv_applications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>
